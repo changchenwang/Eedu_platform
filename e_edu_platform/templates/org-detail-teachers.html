@@ -1,0 +1,37 @@
+{% extends 'org_base.html' %}
+{% block title %}GMOOC Teacher List{% endblock %}
+{% block page_path %}Organization Teacher{% endblock %}
+{% block right_form %}
+<div class="right companycenter layout" >
+        <div class="head">
+            <h1>Organization Teacher</h1>
+        </div>
+        <div class="messagelist">
+            <div class=" butler_list butler-fav-box">
+                {% for teacher in all_teachers %}
+                <dl class="des users">
+                    <dt>
+                        <a href="">
+                        <img width="100" height="100" class="scrollLoading" data-url="{{ MEDIA_URL }}{{ teacher.img }}" src="{{ MEDIA_URL }}{{ teacher.img }}"/>
+                        </a>
+                    </dt>
+                    <dd>
+                        <h1>
+                            <a href="">
+                            {{ teacher.name }}<span class="key">certified</span>
+                            </a>
+                        </h1>
+                        <ul class="cont clearfix">
+                            <li class="time">Work Years：<span>{{ teacher.work_years }}Years</span></li>
+                            <li class="c7">Number of Courses：<span>3</span></li>
+                        </ul>
+                    </dd>
+                </dl>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

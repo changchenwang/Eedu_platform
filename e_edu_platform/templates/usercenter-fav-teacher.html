@@ -1,0 +1,64 @@
+{% extends 'usercenter-base.html' %}
+{% block title %}My Colloction - GMOOC{% endblock %}
+{% load staticfiles %}
+{% block custom_bread %}
+    <section>
+        <div class="wp">
+            <ul  class="crumbs">
+                <li><a href="{% url 'index' %}">Home Page</a>></li>
+                <li><a href="/user/home/">Personal Center</a>></li>
+                <li>My colloction</li>
+            </ul>
+        </div>
+    </section>
+{% endblock %}
+
+{% block right_content %}
+    <div class="right" >
+            <div class="personal_des Releasecont">
+                <div class="head">
+                    <h1>My Colloction</h1>
+                </div>
+            </div>
+            <div class="personal_des permessage">
+                <div class="head">
+                    <ul class="tab_header messagehead">
+                        <li><a href="{% url 'users:myfav_org' %}">Organization</a> </li>
+                        <li class="active"><a href="{% url 'users:myfav_teacher' %}">Teachers </a></li>
+                        <li><a href="{% url 'users:myfav_course' %}">Open Courses</a></li>
+                    </ul>
+                </div>
+                <div class="messagelist">
+                    {% for teacher in teacher_list %}
+                    <div class=" butler_list butler-fav-box">
+                        <dl class="des users">
+                            <dt>
+                                <a href="{% url 'org:teacher_detail' teacher.id %}">
+                                    <img width="100" height="100" src="{{ MEDIA_URL }}{{ teacher.img }}"/>
+                                </a>
+                            </dt>
+                            <dd>
+                                <h1>
+                                    <a href="{% url 'org:teacher_detail' teacher.id %}">
+                                        {{ teacher.name }}<span class="key">Certified teacher</span>
+                                    </a>
+                                </h1>
+                                <ul class="cont clearfix">
+                                    <li class="time">Work years：<span>{{ teacher.work_years }}Years</span></li>
+                                    <li class="c7">Number of course：<span>{{ teacher.get_course_nums }}</span></li>
+                                </ul>
+                                <ul class="cont clearfix">
+                                    <li class="time">Company：<span>{{ teacher.work_company }}</span></li>
+                                    <li class="c7">The company position：<span>{{ teacher.work_position }}</span></li>
+                                </ul>
+                            </dd>
+                            <div class="delete jsDeleteFav_teacher" data-favid="{{ teacher.id }}"></div>
+                        </dl>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+{% endblock %}
+
+

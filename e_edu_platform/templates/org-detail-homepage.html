@@ -1,0 +1,64 @@
+{% extends 'org_base.html' %}
+{% block title %}Organization home Page{% endblock %}
+{% block right_form %}
+<div class="right companycenter layout grouping" >
+		<div class="head">
+			<h1>All Courses</h1>
+			<a class="green fr more" href="org-detail-course.html">Read More  >  </a>
+		</div>
+		<div class="brief group_list">
+            {% for course in all_courses %}
+                <div class="module1_5 box">
+                    <a href="{% url 'course:course_detail' course.id %}"><img width="214" src="{{ MEDIA_URL }}{{ course.img }}"/></a>
+                    <div class="des">
+                        <a href="{% url 'course:course_detail' course.id %}"><h2>{{ course.name }}</h2></a>
+                        <span class="fl">Duration：<i class="key">{{ course.learn_times }}</i></span>
+                        <span class="fr">Students Number：{{ course.students }}</span>
+                    </div>
+                    <div class="bottom">
+                        <span class="fl">{{ course.course_org.name }}</span>
+                         <span class="star fr  notlogin
+                            " data-favid="13"  data-fav-type="4">
+                            {{ course.fav_nums }}
+                        </span>
+                    </div>
+                </div>
+            {% endfor %}
+
+		</div>
+	</div>
+<div class="right companycenter layout" >
+    <div class="head">
+        <h1>Organization Teacher</h1>
+        <a class="green fr more" href="org-detail-teachers.html">Read More  >  </a>
+    </div>
+    {% for teacher in all_teachers %}
+    <div class="diarys">
+        <div class="module5 share company-diary-box" style="padding:10px 0;">
+            <div class="left">
+                <img class="pic" src="{{ MEDIA_URL }}{{ teacher.img }}"/>
+                <p>Nick Name：{{ teacher.name }}</p>
+            </div>
+            <div class="right">
+                <div class="top">
+                    <div class="fl">
+                        <a href=""><h1>java1</h1></a>
+                        <span>Publication：2015-10-12</span>
+                    </div>
+                </div>
+                <div class="middle" style="border-bottom:0;">Course Introduction</div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+
+
+</div>
+<div class="right companycenter layout" >
+    <div class="head">
+        <h1>Organization Introduction</h1>
+        <a class="green fr more" href="org-detail-desc.html">Read More  >  </a>
+    </div>
+    <div class="cont">&nbsp; &nbsp; {% autoescape off %}{{ course_org.desc }}{% endautoescape %}<a href="/company/desc/22/"><span class="green">[read more]</span></a></div>
+</div>
+{% endblock %}

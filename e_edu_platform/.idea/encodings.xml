@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/apps/utils/mixin_utils.py" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/404.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/500.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/base.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/course-comment.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/course-detail.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/course-list.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/course-video.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/org-detail-course.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/org-detail-desc.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/org-detail-homepage.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/org-detail-teachers.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/org-list.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/org_base.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/password_reset.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/teacher-detail.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/teachers-list.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/usercenter-base.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/usercenter-fav-course.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/usercenter-fav-org.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/usercenter-fav-teacher.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/usercenter-info.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/usercenter-message.html" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/templates/usercenter-mycourse.html" charset="GBK" />
+  </component>
+</project>
